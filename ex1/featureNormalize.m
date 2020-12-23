@@ -23,17 +23,16 @@ sigma = zeros(1, size(X, 2));
 %               to perform the normalization separately for 
 %               each feature. 
 %
-% Hint: You might find the 'mean' and 'std' functions useful.
+% Hsubtint: You might find the 'mean' and 'std' functions useful.
 %       
 
+mu = mean(X);
+sigma = std(X);
+
+for i = 1:size(X, 2)
+  X_norm(:,i) = (X(:,i) - mu(i)) / sigma(i);
+end
 
 
-
-
-
-
-
-
-% ============================================================
 
 end

@@ -8,10 +8,9 @@
             "type": "OctaveDebugger",
             "request": "launch",
             "name": "Function or file to execute.",
-            "program": "${workspaceFolder}/ex1/WarmUpExercise.m",
+            "program": "${workspaceFolder}/ex1/ex1.m",
             "octave": "octave-cli",
-            "sourceFolder": "${workspaceFolder}",
-            "autoTerminate": true
+            "autoTerminate": false
         }
     ]
 }
