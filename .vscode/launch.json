@@ -8,7 +8,7 @@
             "type": "OctaveDebugger",
             "request": "launch",
             "name": "Function or file to execute.",
-            "program": "${workspaceFolder}/ex1/ex1.m",
+            "program": "${workspaceFolder}/ex2/ex2.m",
             "octave": "octave-cli",
             "autoTerminate": false
         }
