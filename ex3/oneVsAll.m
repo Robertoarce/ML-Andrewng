@@ -51,6 +51,24 @@ X = [ones(m, 1) X];
 
 
 
+     
+% Set options for fminunc
+    options = optimset('GradObj', 'on', 'MaxIter', 50);
+
+
+
+for k=1:num_labels %<<< this is the number of labels (goes from 0 to 9, where 0 is 10 )
+
+% Set Initial theta
+     initial_theta = zeros(n + 1, 1); %this also could be ones, is just a starting point.
+
+% optimize theta using fmincg ( y ==k has to be )
+    aux = fmincg (@(t)(lrCostFunction(t, X, (y == k), lambda)),initial_theta, options);
+
+% once optimised assign to the respective answer, repeat proces
+all_theta(k,:) = aux'; 
+end
+
 
 
 
